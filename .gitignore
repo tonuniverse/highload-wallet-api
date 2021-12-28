@@ -17,3 +17,6 @@ go.work
 
 # wallet
 contract/generated
+
+# config
+config.json
