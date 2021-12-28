@@ -2,6 +2,8 @@
 "TonUtil.fif" include
 "Asm.fif" include
 
+// file from the repository: https://github.com/akifoq/highload-wallet
+
 { ."usage: " @' $0 type ." <workchain-id> <subwallet-id> [<filename-base>]" cr
   ."Creates a new v2 high-load wallet in the specified workchain, with the controlling private key saved to or loaded from <filename-base>.pk "
   ."('new-wallet.pk' by default)" cr 
