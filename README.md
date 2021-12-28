@@ -8,11 +8,9 @@ https://github.com/tonuniverse/highload-wallet-api
 
 ## Getting started
 
-First, you need to compile the FunC and Fift needed to create the wallet and interact with it. The easiest way to do this is to install `mytonctrl` in `lite` mode.
+First, you need to compile the FunC and Fift needed to create the wallet and interact with it. The easiest way to do this is to install `mytonctrl` in `lite` mode from https://github.com/igroman787/mytonctrl
 
-- install `mytonctrl` https://github.com/igroman787/mytonctrl
-
-Fift will be built automatically. Now do the following to build the FunC:
+Fift will be built automatically after `mytonctrl` installation. Now do the following to build the FunC:
 
 - `cd /usr/bin/ton/`
 - `make func`
