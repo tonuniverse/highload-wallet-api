@@ -27,7 +27,7 @@ Activate your wallet.
 
 You will need to specify the jsonRPC url, you can use public url depending on the type of network or your own local TON blockchain jsonRPC.
 
-Mainnet: https://toncenter.com/api/v2/jsonRPC __
+Mainnet: https://toncenter.com/api/v2/jsonRPC  
 Testnet: https://testnet.toncenter.com/api/v2/jsonRPC
 
 - `apt install curl`
