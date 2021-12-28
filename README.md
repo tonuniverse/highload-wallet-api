@@ -1,5 +1,10 @@
 ## highload-wallet-api
 
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/tonuniverse/highload-wallet-api)
+![GitHub](https://img.shields.io/github/license/tonuniverse/highload-wallet-api)
+
+API wrapper over high-load TON wallet. Can be useful for cryptocurrency exchanges or any services where mass payments in TON coins are required.
+
 ## Source code
 
 You can always get the source code from the github repository page:
@@ -23,9 +28,7 @@ Create the first highload TON wallet
 
 Get the wallet address from `contract/generated/wallet-info.txt` and send some TON coins to it(0.1 TON will be enough)
 
-Activate your wallet. 
-
-You will need to specify the jsonRPC url, you can use public url depending on the type of network or your own local TON blockchain jsonRPC.
+Activate your wallet. You will need to specify the jsonRPC url, you can use public url depending on the type of network or your own local TON blockchain jsonRPC.
 
 Mainnet: https://toncenter.com/api/v2/jsonRPC  
 Testnet: https://testnet.toncenter.com/api/v2/jsonRPC
