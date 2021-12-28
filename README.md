@@ -41,4 +41,4 @@ Testnet: https://testnet.toncenter.com/api/v2/jsonRPC
 
 GPL-3.0 License
 
-The original license text can be obtained in the file "LICENSE"
+The original license text can be obtained in the "LICENSE" file 
