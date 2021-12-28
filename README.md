@@ -15,6 +15,24 @@ Fift will be built automatically after `mytonctrl` installation. Now do the foll
 - `cd /usr/bin/ton/`
 - `make func`
 
+Create the first highload TON wallet
+
+- go to `highload-wallet-api` directory
+- `cd contract`
+- `./wallet.sh`
+
+Get the wallet address from `contract/generated/wallet-info.txt` and send some TON coins to it(0.1 TON will be enough)
+
+Activate your wallet. 
+
+You will need to specify the jsonRPC url, you can use public url depending on the type of network or your own local TON blockchain jsonRPC.
+
+Mainnet: https://toncenter.com/api/v2/jsonRPC
+Testnet: https://testnet.toncenter.com/api/v2/jsonRPC
+
+- `apt install curl`
+- `./activate-wallet.sh https://toncenter.com/api/v2/jsonRPC`
+
 
 ## LICENSE
 
