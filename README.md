@@ -32,6 +32,7 @@ Testnet: https://testnet.toncenter.com/api/v2/jsonRPC
 
 Build the server
 
+- go to project root directory
 - `go build`
 
 Create `config.json` in the project root directory
