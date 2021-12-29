@@ -3,13 +3,7 @@
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/tonuniverse/highload-wallet-api)
 ![GitHub](https://img.shields.io/github/license/tonuniverse/highload-wallet-api)
 
-API wrapper over high-load TON wallet. Can be useful for cryptocurrency exchanges or any services where mass payments in TON coins are required.
-
-## Source code
-
-You can always get the source code from the github repository page:
-
-https://github.com/tonuniverse/highload-wallet-api
+API wrapper over high-load TON wallet smart contract. Can be useful for cryptocurrency exchanges or any services where mass payments in TON coins are required.
 
 ## Getting started
 
@@ -87,6 +81,16 @@ Send POST request to `/transfer` endpoint with JSON data:
   ]
 }
 ```
+
+## Source code
+
+You can always get the source code from the github repository page:
+
+https://github.com/tonuniverse/highload-wallet-api
+
+## High-load wallet smart contract
+
+The repository includes TON smart contract from https://github.com/akifoq/highload-wallet
 
 ## LICENSE
 
