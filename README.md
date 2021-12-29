@@ -36,6 +36,43 @@ Testnet: https://testnet.toncenter.com/api/v2/jsonRPC
 - `apt install curl`
 - `./activate-wallet.sh https://toncenter.com/api/v2/jsonRPC`
 
+Build the server
+
+- `go build`
+
+Create `config.json` in the project root directory
+
+```json
+{
+    "server": {
+        "host": "127.0.0.1",
+        "port": "8080"
+    },
+    "ton_net": {
+        "json_rpc_url": "https://toncenter.com/api/v2/jsonRPC"
+    },
+    "fift": {
+        "path": "/usr/src/ton/crypto/fift/lib:/usr/src/ton/crypto/smartcont",
+        "binary": "/usr/bin/ton/crypto/fift"
+    },
+    "contract": {
+        "new_order_fif": "contract/new-order.fif"
+    },
+    "temp_path": {
+        "orders": "temp/orders",
+        "bocs": "temp/bocs"
+    }, 
+    "wallet": {
+        "path": "contract/generated",
+        "name": "new-wallet",
+        "subwallet_id": "1"
+    }
+}
+```
+
+Run the server:
+
+- `./highload-wallet-api`
 
 ## LICENSE
 
