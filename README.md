@@ -70,6 +70,13 @@ Run the server:
 
 Send POST request to `/transfer` endpoint with JSON data:
 
+- transfer_tasks: array; length must be <= 100 elements
+- - dest_address: TON base64 address
+- - amount_ton: amount in TON format
+- - msg: transaction comment; must be between 0 and 123 characters long
+
+Example:
+
 ```json
 {
   "transfer_tasks": [
@@ -81,6 +88,8 @@ Send POST request to `/transfer` endpoint with JSON data:
   ]
 }
 ```
+
+
 
 ## Source code
 

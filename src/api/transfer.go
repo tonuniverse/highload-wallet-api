@@ -57,8 +57,15 @@ func Transfer(c *fiber.Ctx) error {
 		return c.JSON(apierrs.ErrorJsonData)
 	}
 
+	if len(data.TransferTasks) > 100 {
+		return c.JSON(apierrs.ErrorTransferSize)
+	}
+
 	var ordertxt string
 	for i, tr := range data.TransferTasks {
+		if len(tr.Msg) > 123 {
+			return c.JSON(apierrs.ErrorMsgTooLong)
+		}
 		ordertxt += fmt.Sprintf("SEND %s %s %s", tr.DestAddr, tr.AmountTon, tr.Msg)
 		if i != len(data.TransferTasks)-1 {
 			ordertxt += "\n"

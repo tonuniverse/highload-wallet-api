@@ -34,9 +34,13 @@ var httperrs = struct {
 }
 
 var apierrs = struct {
-	ErrorJsonData err
-	ErrorJsonRpc  err
+	ErrorJsonData     err
+	ErrorJsonRpc      err
+	ErrorTransferSize err
+	ErrorMsgTooLong   err
 }{
-	ErrorJsonData: err{1, "Error Json Data", false},
-	ErrorJsonRpc:  err{2, "Json RPC return an unexpected error", false},
+	ErrorJsonData:     err{1001, "error json data", false},
+	ErrorJsonRpc:      err{1002, "json rpc return an unexpected error", false},
+	ErrorTransferSize: err{1003, "transfer_tasks length more than 100 elements", false},
+	ErrorMsgTooLong:   err{1004, "msg must be between 0 and 123 characters long", false},
 }
