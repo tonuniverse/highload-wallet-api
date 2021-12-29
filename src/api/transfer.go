@@ -46,7 +46,7 @@ func Transfer(c *fiber.Ctx) error {
 
 	ordfileName := path.Join(config.Cfg.TempPath.Orders, "order_"+utils.UUID()+".txt")
 	if err := os.WriteFile(ordfileName, []byte(ordertxt), 0644); err != nil {
-		// TODO: log error
+		log.Println("ERROR WriteFile: " + err.Error())
 		return c.JSON(httperrs.InternalServerError500)
 	}
 
@@ -77,21 +77,21 @@ func Transfer(c *fiber.Ctx) error {
 	cmd.Stdout = &stdout
 
 	if err := cmd.Start(); err != nil {
-		fmt.Println("err")
-		fmt.Println(err.Error())
+		log.Println("ERROR generate order cmd.Start(): " + err.Error())
 		return c.JSON(httperrs.InternalServerError500)
 	}
 	cmd.Wait()
 
-	// fmt.Println(stdout.String())
-
-	s, err := jrpc.SendBocFromFile(config.Cfg.TonNet.JsonRpcURL, bocfileName)
+	jrpcresp, err := jrpc.SendBocFromFile(config.Cfg.TonNet.JsonRpcURL, bocfileName)
 	if err != nil {
 		log.Println("ERROR SendBocFromFile: " + err.Error())
 	}
 
-	if !strings.Contains(string(s), `"ok": true`) {
-		// fmt
+	if !strings.Contains(string(jrpcresp), `"ok": true`) {
+		log.Println("-----------------")
+		log.Println("JSON RPC return not ok:")
+		log.Println(jrpcresp)
+		log.Println("-----------------")
 		return c.JSON(apierrs.ErrorJsonRpc)
 	}
 
