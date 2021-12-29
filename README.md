@@ -74,6 +74,20 @@ Run the server:
 
 - `./highload-wallet-api`
 
+Send POST request to `/transfer` endpoint with JSON data:
+
+```json
+{
+  "transfer_tasks": [
+    {
+      "dest_address": "EQCD39VS5jcptHL8vMjEXrzGaRcCVYto7HUn4bpAOg8xqB2N",
+      "amount_ton": "0.0001",
+      "msg": "test highload wallet"
+    }
+  ]
+}
+```
+
 ## LICENSE
 
 GPL-3.0 License
