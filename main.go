@@ -33,7 +33,7 @@ func main() {
 	config.Configure()
 
 	app := fiber.New(fiber.Config{
-		Prefork: false,
+		Prefork: config.Cfg.Server.Prefork,
 	})
 
 	app.Use(logger.New(logger.Config{

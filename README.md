@@ -40,7 +40,8 @@ Create `config.json` in the project root directory
 {
     "server": {
         "host": "127.0.0.1",
-        "port": "8080"
+        "port": "8080",
+        "prefork": true
     },
     "ton_net": {
         "json_rpc_url": "https://toncenter.com/api/v2/jsonRPC"
