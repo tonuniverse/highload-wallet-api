@@ -94,9 +94,16 @@ Example JSON in POST request:
 
 Possible errors can be found here: `src/api/errors.go`
 
-## Validating parameters
+## Recommendations
+
+### Validating parameters
 
 This API is designed to work locally in your infrastructure. You must validate all parameters reliably before sending them to highload-wallet-api
+
+### JSON RPC
+
+For stable operation of API, we recommend using your own instance of ton full node with a local JSON RPC server. 
+Learn more in the `mytonctrl` documentation about it.
 
 ## Source code
 
