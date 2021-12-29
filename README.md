@@ -75,21 +75,27 @@ Send POST request to `/transfer` endpoint with JSON data:
 - - amount_ton: amount in TON format
 - - msg: transaction comment; must be between 0 and 123 characters long
 
-Example:
+Example JSON in POST request:
 
 ```json
 {
   "transfer_tasks": [
-    {
+    { 
       "dest_address": "EQCD39VS5jcptHL8vMjEXrzGaRcCVYto7HUn4bpAOg8xqB2N",
       "amount_ton": "0.0001",
-      "msg": "test highload wallet"
+      "msg": "test"
     }
   ]
 }
 ```
 
+## API Errors
 
+Possible errors can be found here: `src/api/errors.go`
+
+## Validating parameters
+
+This API is designed to work locally in your infrastructure. You should validate all parameters reliably before sending them to highload-wallet-api
 
 ## Source code
 
