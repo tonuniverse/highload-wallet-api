@@ -95,7 +95,7 @@ Possible errors can be found here: `src/api/errors.go`
 
 ## Validating parameters
 
-This API is designed to work locally in your infrastructure. You should validate all parameters reliably before sending them to highload-wallet-api
+This API is designed to work locally in your infrastructure. You must validate all parameters reliably before sending them to highload-wallet-api
 
 ## Source code
 
