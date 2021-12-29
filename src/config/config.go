@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-type Config struct {
+type FileConfig struct {
 	Server struct {
 		Host string `json:"host"`
 		Port string `json:"port"`
@@ -20,9 +20,24 @@ type Config struct {
 		Path   string `json:"path"`
 		Binary string `json:"binary"`
 	} `json:"fift"`
+
+	Contract struct {
+		NewOrderFif string `json:"new_order_fif"`
+	} `json:"contract"`
+
+	TempPath struct {
+		Orders string `json:"orders"`
+		Bocs   string `json:"bocs"`
+	} `json:"temp_path"`
+
+	Wallet struct {
+		Path        string `json:"path"`
+		Name        string `json:"name"`
+		SubwalletID string `json:"subwallet_id"`
+	} `json:"wallet"`
 }
 
-var Cfg Config
+var Cfg FileConfig
 
 func Configure() {
 	jsonFile, err := os.Open("config.json")
@@ -34,4 +49,5 @@ func Configure() {
 	if err := json.NewDecoder(jsonFile).Decode(&Cfg); err != nil {
 		log.Fatal(err)
 	}
+
 }

@@ -20,3 +20,14 @@ contract/generated
 
 # config
 config.json
+
+# temp
+temp/bocs/*
+!temp/bocs/.gitkeep
+
+temp/orders/*
+!temp/orders/.gitkeep
+
+# tests
+test.py
+test.go
