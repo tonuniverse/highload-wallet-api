@@ -84,13 +84,13 @@ Send POST request to `/transfer` endpoint with JSON data:
 
 ## Source code
 
-You can always get the source code from the github repository page:
-
+You can always get the source code from the github repository page:  
 https://github.com/tonuniverse/highload-wallet-api
 
 ## High-load wallet smart contract
 
-The repository includes TON smart contract from https://github.com/akifoq/highload-wallet
+The repository includes TON smart contract from:  
+https://github.com/akifoq/highload-wallet
 
 ## LICENSE
 
