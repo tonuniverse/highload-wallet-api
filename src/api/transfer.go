@@ -115,7 +115,7 @@ func Transfer(c *fiber.Ctx) error {
 		log.Println("ERROR SendBocFromFile: " + err.Error())
 	}
 
-	if !strings.Contains(string(jrpcresp), `"ok": true`) {
+	if !strings.Contains(string(jrpcresp), `"ok":true`) {
 		log.Println("-----------------")
 		log.Println("JSON RPC return not ok:")
 		log.Println(jrpcresp)
